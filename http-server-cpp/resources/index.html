@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-threaded HTTP Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #e8f4f8;
+            border-left: 4px solid #2196F3;
+        }
+        .download-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+        a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multi-threaded HTTP Server</h1>
+        <p>Welcome to the C++ HTTP Server built from scratch using socket programming!</p>
+        
+        <h2>Features</h2>
+        <ul class="feature-list">
+            <li>Multi-threaded with configurable thread pool</li>
+            <li>GET requests for HTML files and binary downloads</li>
+            <li>POST requests for JSON data uploads</li>
+            <li>Path traversal protection and host validation</li>
+            <li>Keep-alive connection support</li>
+            <li>Comprehensive logging with timestamps</li>
+            <li>Binary file integrity verification</li>
+        </ul>
+        
+        <div class="download-section">
+            <h3>Test Downloads</h3>
+            <p>Try downloading these test files:</p>
+            <ul>
+                <li><a href="/logo.png">Download PNG Image (logo.png)</a></li>
+                <li><a href="/photo.jpg">Download JPEG Image (photo.jpg)</a></li>
+                <li><a href="/sample.txt">Download Text File (sample.txt)</a></li>
+                <li><a href="/lorem.txt">Download Lorem Ipsum (lorem.txt)</a></li>
+            </ul>
+        </div>
+        
+        <div class="download-section">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="/about.html">About Page</a></li>
+                <li><a href="/contact.html">Contact Page</a></li>
+            </ul>
+        </div>
+        
+        <p><em>Built for Computer Networks course assignment</em></p>
+    </div>
+</body>
+</html>

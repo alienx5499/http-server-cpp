@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Multi-threaded HTTP Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .contact-info {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .test-section {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .json-example {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            border-left: 4px solid #2196F3;
+        }
+        a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact & Testing</h1>
+        
+        <div class="contact-info">
+            <h2>Server Information</h2>
+            <p><strong>Server:</strong> Multi-threaded HTTP Server</p>
+            <p><strong>Version:</strong> 1.0.0</p>
+            <p><strong>Built with:</strong> C++ Socket Programming</p>
+            <p><strong>Course:</strong> Computer Networks</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>Test POST Requests</h2>
+            <p>You can test the JSON upload functionality by sending POST requests to the server. Here's an example:</p>
+            
+            <h3>Example JSON for Upload:</h3>
+            <div class="json-example">{
+  "name": "Test User",
+  "email": "test@example.com",
+  "message": "This is a test message for the HTTP server",
+  "timestamp": "2024-03-15T10:30:00Z",
+  "data": {
+    "type": "test",
+    "value": 42
+  }
+}</div>
+            
+            <h3>How to Test:</h3>
+            <ul>
+                <li>Use curl: <code>curl -X POST -H "Content-Type: application/json" -d '{"test": "data"}' http://localhost:8080/upload</code></li>
+                <li>Use Postman or similar API testing tools</li>
+                <li>Send POST request with JSON body to any endpoint</li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h2>Server Testing</h2>
+            <p>This server supports various test scenarios:</p>
+            <ul>
+                <li><strong>GET Requests:</strong> HTML files, binary downloads (images, text)</li>
+                <li><strong>POST Requests:</strong> JSON data uploads to /uploads/ directory</li>
+                <li><strong>Security Tests:</strong> Path traversal protection, host validation</li>
+                <li><strong>Concurrency Tests:</strong> Multiple simultaneous connections</li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h2>Server Statistics</h2>
+            <p>The server provides comprehensive logging including:</p>
+            <ul>
+                <li>Request/response details with timestamps</li>
+                <li>Thread pool status and connection counts</li>
+                <li>File transfer statistics and binary integrity</li>
+                <li>Security violation logging</li>
+            </ul>
+        </div>
+        
+        <p><a href="/">← Back to Home</a> | <a href="/about.html">About</a></p>
+    </div>
+</body>
+</html>
