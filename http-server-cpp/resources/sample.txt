@@ -1,0 +1,24 @@
+This is a sample text file for testing the multi-threaded HTTP server.
+
+The server should serve this file as a binary download with the Content-Type: application/octet-stream header.
+
+Features being tested:
+- Binary file transfer
+- Content-Disposition header for download
+- File integrity preservation
+- Proper MIME type handling
+
+This file contains various characters to test encoding:
+- Special characters: !@#$%^&*()
+- Unicode: Hello 世界 🌍
+- Numbers: 1234567890
+- Mixed case: aBcDeFgHiJkLmNoPqRsTuVwXyZ
+
+The server implementation includes:
+1. Thread pool management
+2. Connection queue handling
+3. HTTP request parsing
+4. Security validation
+5. Comprehensive logging
+
+End of sample file.
