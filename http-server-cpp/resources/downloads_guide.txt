@@ -1,6 +1,6 @@
 This is a sample text file for testing the multi-threaded HTTP server.
 
-The server should serve this file as a binary download with the Content-Type: application/octet-stream header.
+Theme: Football download test assets (Real Madrid crest, Liverpool photos).
 
 Features being tested:
 - Binary file transfer
@@ -8,13 +8,19 @@ Features being tested:
 - File integrity preservation
 - Proper MIME type handling
 
-This file contains various characters to test encoding:
+Useful paths to try:
+- /realmadrid.png   (PNG, >1MB)
+- /ronaldo.png      (PNG)
+- /gerrard.jpeg     (JPEG)
+- /liverpool.jpeg   (JPEG)
+
+Encoding checks:
 - Special characters: !@#$%^&*()
-- Unicode: Hello 世界 🌍
+- Unicode: Hala Madrid! こんにちは 你好
 - Numbers: 1234567890
 - Mixed case: aBcDeFgHiJkLmNoPqRsTuVwXyZ
 
-The server implementation includes:
+Server implementation highlights:
 1. Thread pool management
 2. Connection queue handling
 3. HTTP request parsing
