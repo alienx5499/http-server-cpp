@@ -160,10 +160,12 @@ http-server-cpp/
    │  ├─ index.html            # Home page
    │  ├─ about.html            # About page
    │  ├─ contact.html          # Contact page
-   │  ├─ sample.txt            # Sample text file for testing
-   │  ├─ lorem.txt             # Lorem ipsum text file
-   │  ├─ logo.png              # Sample PNG image
-   │  ├─ photo.png             # Sample image file
+   │  ├─ downloads_guide.txt   # Sample text file for testing
+   │  ├─ clubs.txt             # Larger football-themed text file
+   │  ├─ realmadrid.png        # Large PNG image (>1MB)
+   │  ├─ ronaldo.png           # PNG image
+   │  ├─ gerrard.jpeg          # JPEG image
+   │  ├─ liverpool.jpeg        # JPEG image
    │  └─ uploads/              # Directory for POST uploads
    │     └─ .gitkeep           # Keep directory in git
    └─ build/                   # Build output directory (generated)
@@ -239,12 +241,23 @@ http-server-cpp/
    ```bash
    # Test HTML serving
    curl -H "Host: localhost:8080" http://localhost:8080/
-   
+
    # Test binary download
-   curl -H "Host: localhost:8080" -o downloaded.txt http://localhost:8080/sample.txt
-   
+   curl -H "Host: localhost:8080" -o realmadrid.png http://localhost:8080/realmadrid.png
+   curl -H "Host: localhost:8080" -o ronaldo.png http://localhost:8080/ronaldo.png
+   curl -H "Host: localhost:8080" -o gerrard.jpeg http://localhost:8080/gerrard.jpeg
+   curl -H "Host: localhost:8080" -o liverpool.jpeg http://localhost:8080/liverpool.jpeg
+
+   # Test text downloads
+   curl -H "Host: localhost:8080" -o guide.txt http://localhost:8080/downloads_guide.txt
+   curl -H "Host: localhost:8080" -o clubs.txt http://localhost:8080/clubs.txt
+
    # Test JSON upload
-   curl -H "Host: localhost:8080" -X POST -H "Content-Type: application/json" -d '{"test": "data"}' http://localhost:8080/upload
+   curl -H "Host: localhost:8080" \
+        -X POST \
+        -H "Content-Type: application/json" \
+        -d '{"club":"Real Madrid","opponent":"Juventus","player":"Cristiano Ronaldo","event":"bicycle_kick","minute":64,"competition":"UEFA Champions League","season":"2017-18","venue":"Allianz Stadium (Turin)","metadata":{"assist":"Dani Carvajal","xG":0.07}}' \
+        http://localhost:8080/upload
    ```
 
 ---
@@ -280,19 +293,26 @@ The server implements comprehensive security features that can be tested:
 
 2. **Manual Testing**:
 
-   ```bash
-   # Start server
-   ./build/server 9000 127.0.0.1 5 &
-   
-   # Test HTML serving
-   curl -H "Host: localhost:9000" http://localhost:9000/
-   
-   # Test binary download
-   curl -H "Host: localhost:9000" -o test.txt http://localhost:9000/sample.txt
-   
-   # Test JSON upload
-   curl -H "Host: localhost:9000" -X POST -H "Content-Type: application/json" -d '{"test": "data"}' http://localhost:9000/upload
-   ```
+```bash
+# Start server
+./build/server 9000 127.0.0.1 5 &
+
+# Test HTML serving
+curl -H "Host: localhost:9000" http://localhost:9000/
+
+# Test binary downloads (PNG/JPEG)
+curl -H "Host: localhost:9000" -o realmadrid.png http://localhost:9000/realmadrid.png
+curl -H "Host: localhost:9000" -o ronaldo.png http://localhost:9000/ronaldo.png
+curl -H "Host: localhost:9000" -o gerrard.jpeg http://localhost:9000/gerrard.jpeg
+curl -H "Host: localhost:9000" -o liverpool.jpeg http://localhost:9000/liverpool.jpeg
+
+# Test text downloads
+curl -H "Host: localhost:9000" -o downloads_guide.txt http://localhost:9000/downloads_guide.txt
+curl -H "Host: localhost:9000" -o clubs.txt http://localhost:9000/clubs.txt
+
+# Test JSON upload
+curl -H "Host: localhost:9000" -X POST -H "Content-Type: application/json" -d '{"test": "data"}' http://localhost:9000/upload
+```
 
 ### **🧰 Testing Features**
 
