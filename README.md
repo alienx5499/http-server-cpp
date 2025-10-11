@@ -190,22 +190,18 @@ http-server-cpp/
 
 <table>
 <tr>
-  <td><img src="https://via.placeholder.com/600x400/2d3748/ffffff?text=Server+Startup+Logs" alt="Server Startup" width="600px" loading="lazy"></td>
-  <td><img src="https://via.placeholder.com/600x400/2d3748/ffffff?text=Request+Processing" width="600px" loading="lazy"></td>
-  <td><img src="https://via.placeholder.com/600x400/2d3748/ffffff?text=Thread+Pool+Status" width="600px" loading="lazy"></td>
+  <td><img src="https://github.com/user-attachments/assets/85b41973-4728-4f3b-a865-846f908dcff1" alt="Server Startup" width="1200px" loading="lazy"></td>
+  <td><img src="https://github.com/user-attachments/assets/c7a631d4-6c10-4f51-8f35-2452dbe000d8" width="1200px" loading="lazy"></td>
 </tr>
 <tr>
   <td><b>Server Startup</b></td>
   <td><b>Request Processing</b></td>
-  <td><b>Thread Pool Status</b></td>
 </tr>
 <tr>
-  <td><img src="https://via.placeholder.com/600x400/2d3748/ffffff?text=HTML+File+Serving" width="600px" loading="lazy"></td>
-  <td><img src="https://via.placeholder.com/600x400/2d3748/ffffff?text=Binary+File+Download" width="600px" loading="lazy"></td>
-  <td><img src="https://via.placeholder.com/600x400/2d3748/ffffff?text=JSON+Upload+Response" width="600px" loading="lazy"></td>
+  <td><img src="https://github.com/user-attachments/assets/cbdc3be6-724c-4bb8-84d1-844ec3015223" width="1200px" loading="lazy"></td>
+  <td><img src="https://github.com/user-attachments/assets/e587d24e-5393-43b1-a081-948448161c84" width="1200px" loading="lazy"></td>
 </tr>
 <tr>
-  <td><b>HTML File Serving</b></td>
   <td><b>Binary File Download</b></td>
   <td><b>JSON Upload Response</b></td>
 </tr>
